@@ -8,8 +8,6 @@ public class Main {
         Block block4 = new Block("转账四十元","");
         Block block5 = new Block("转账五十元","");
 
-
-        //设置当前的挖矿难度是2
         Chain chain =  new Chain();
 
         chain.addBlockToChain(block1);
@@ -25,7 +23,7 @@ public class Main {
         System.out.println(isValidate);
         //尝试篡改数据
         block3.setData("转账一百元");
-        System.out.println("============================以下篡改后的是区块链信息===============================");
+        System.out.println("============================以下篡改后的区块链信息=================================");
         chain.printChain();
         System.out.println(chain.validateChain());
     }
